@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calendar</title>
+    <title>PHP Calendar</title>
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
 </head>
 <body>
