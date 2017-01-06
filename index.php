@@ -10,12 +10,21 @@
 
     date_default_timezone_set("America/New_York");
 
-    $currentDayOfTheMonth = date(j);
-    echo $currentDayOfTheMonth;
-    $currentYear = date(Y);
-    $currentMonth = date(F);
+    //////////////
+    $currentDayOfTheMonth = date(j); //1-31
+    $currentYear = date(Y); //2017
+    $currentMonth = date(F); //December
+    $currentMonth2 = date(n); //1-12
+    //////////////
 
-    $time = strtotime("1 " .$currentMonth." ".$currentYear);
+    ///calculates how many days in current month
+    $currentDaysInMonth = cal_days_in_month(CAL_GREGORIAN,$currentMonth2,$currentYear);
+    ////////////////////////
+
+    ///figures out firt day of month 0-6
+    $timeStamp = strtotime("1 " . $currentMonth . " " . $currentYear);
+    $currentfirstDay = date(w, $timeStamp);
+    /////////////////////////////////
 
 ?>
 
