@@ -1,0 +1,22 @@
+* {
+
+    box-sizing: border-box;
+
+}
+
+.calendar {
+
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    background-color: red;
+
+}
+
+.box {
+
+    min-width: 14.28%;
+    height: 40px;
+    background-color: blue;
+    border: solid 2px white;
+}

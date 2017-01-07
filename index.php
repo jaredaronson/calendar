@@ -3,6 +3,7 @@
 <head>
     <title>PHP Calendar</title>
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" type="text/css" href="calendar.css">
 </head>
 <body>
 
@@ -27,6 +28,24 @@
     /////////////////////////////////
 
 ?>
+
+<div class="contain">
+
+    <div class="calendar">
+
+
+    <?php
+
+        for($x = 0; $x < 42; $x++){
+
+            echo "<div class=\"box\"></div>";
+        }
+
+    ?>
+
+    </div>
+
+</div>
 
 </body>
 </html>
