@@ -27,6 +27,13 @@
     $currentfirstDay = date(w, $timeStamp);
     /////////////////////////////////
 
+    //counts day of month
+    $dayNum = 1;
+
+    //counts itterations of loop
+    $count = 0;
+
+
 ?>
 
 <div class="contain">
@@ -38,7 +45,25 @@
 
         for($x = 0; $x < 42; $x++){
 
-            echo "<div class=\"box\"></div>";
+            //creates empty boxes in beginning
+            if($count < $currentfirstDay){
+
+                echo "<div class=\"box\"></div>";
+
+            //creates numbered boxes
+            }else if($dayNum <= $currentDaysInMonth){
+
+                echo "<div class=\"box\">".$dayNum."</div>";
+                $dayNum++;
+
+            //creates empty boxes at end
+            } else{
+
+                echo "<div class=\"box\"></div>";
+
+            }
+
+            $count++;
         }
 
     ?>
