@@ -41,32 +41,45 @@
     <div class="calendar">
 
 
-    <?php
+        <header>
 
-        for($x = 0; $x < 42; $x++){
+            <?php
 
-            //creates empty boxes in beginning
-            if($count < $currentfirstDay){
+            echo "<a class=\"link\" href=\"back.php?year=".$currentYear."&month=".$currentMonth."\">back</a> ";
+            echo "<a class=\"link\" href=\"next.php?year=".$currentYear."&month=".$currentMonth."\">next</a> ";
 
-                echo "<div class=\"box\"></div>";
+            echo $currentMonth ." ". $currentYear;
 
-            //creates numbered boxes
-            }else if($dayNum <= $currentDaysInMonth){
+            ?>
 
-                echo "<div class=\"box\">".$dayNum."</div>";
-                $dayNum++;
+        </header>
 
-            //creates empty boxes at end
-            } else{
+        <?php
 
-                echo "<div class=\"box\"></div>";
+            for($x = 0; $x < 42; $x++){
 
+                //creates empty boxes in beginning
+                if($count < $currentfirstDay){
+
+                    echo "<div class=\"box\"></div>";
+
+                //creates numbered boxes
+                }else if($dayNum <= $currentDaysInMonth){
+
+                    echo "<div class=\"box\">".$dayNum."</div>";
+                    $dayNum++;
+
+                //creates empty boxes at end
+                } else{
+
+                    echo "<div class=\"box\"></div>";
+
+                }
+
+                $count++;
             }
 
-            $count++;
-        }
-
-    ?>
+        ?>
 
     </div>
 
