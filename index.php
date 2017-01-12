@@ -4,6 +4,7 @@
     <title>PHP Calendar</title>
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <link rel="stylesheet" type="text/css" href="calendar.css">
+    <script src="https://use.fontawesome.com/b7fbe40ec5.js"></script>
 </head>
 <body>
 
@@ -45,10 +46,13 @@
 
             <?php
 
-            echo "<a class=\"link\" href=\"back.php?year=".$currentYear."&month=".$currentMonth."\">back</a> ";
-            echo "<a class=\"link\" href=\"next.php?year=".$currentYear."&month=".$currentMonth."\">next</a> ";
+            echo "<a class=\"link\" href=\"back.php?year=".$currentYear."&month=".$currentMonth."\"><i class=\"fa fa-hand-o-left\" aria-hidden=\"true\"></i>
+</a> ";
 
             echo $currentMonth ." ". $currentYear;
+
+            echo " <a class=\"link\" href=\"next.php?year=".$currentYear."&month=".$currentMonth."\"><i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i>
+</a> ";
 
             ?>
 

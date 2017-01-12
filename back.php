@@ -3,6 +3,7 @@
 <head>
     <title>PHP Calendar</title>
     <link rel="stylesheet" type="text/css" href="calendar.css">
+    <script src="https://use.fontawesome.com/b7fbe40ec5.js"></script>
 </head>
 <body>
 
@@ -97,10 +98,13 @@ switch($month){
 
                 <?php
 
-                echo "<a class=\"link\" href=\"back.php?year=".$theYear."&month=".$monthText."\">back</a> ";
-                echo "<a class=\"link\" href=\"next.php?year=".$theYear."&month=".$monthText."\">next</a> ";
+            echo "<a class=\"link\" href=\"back.php?year=".$theYear."&month=".$monthText."\"><i class=\"fa fa-hand-o-left\" aria-hidden=\"true\"></i>
+</a> ";
 
-                echo $monthText ." ". $theYear;
+            echo $monthText ." ". $theYear;
+
+            echo " <a class=\"link\" href=\"next.php?year=".$theYear."&month=".$monthText."\"><i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i>
+</a> ";
 
                 ?>
 
