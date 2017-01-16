@@ -31,6 +31,16 @@ header {
     border: solid 2px white;
 }
 
+.boxCurrentDay {
+
+    flex-basis: 14.28%;
+    height: 40px;
+    color: white;
+    background-color: red;
+    border: solid 2px white;
+
+}
+
 .link {
 
     text-decoration: none;

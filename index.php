@@ -70,9 +70,18 @@
                 //creates numbered boxes
                 }else if($dayNum <= $currentDaysInMonth){
 
-                    echo "<div class=\"box\">".$dayNum."</div>";
-                    $dayNum++;
+                    //changes the current day's background color by changing class
+                    if($dayNum == $currentDayOfTheMonth){
 
+                        echo "<div class=\"boxCurrentDay\">".$dayNum."</div>";
+                        $dayNum++;
+
+                    }else{
+
+                        echo "<div class=\"box\">".$dayNum."</div>";
+                        $dayNum++;
+
+                    }
                 //creates empty boxes at end
                 } else{
 

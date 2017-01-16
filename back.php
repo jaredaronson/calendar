@@ -69,6 +69,11 @@ switch($month){
     break;
 }
 
+
+    $currentDayOfTheMonth = date(j); //1-31
+    $currentYear = date(Y); //2017
+    $currentMonth = date(F); //December
+
     $time = strtotime("1 " .$month." ".$year);
     /////////////////
 
@@ -122,8 +127,18 @@ switch($month){
                     //creates numbered boxes
                     }else if($dayNum <= $daysInMonth){
 
-                        echo "<div class=\"box\">".$dayNum."</div>";
-                        $dayNum++;
+                        //changes the current day's background color by changing class
+                        if($month == $currentMonth && $theYear == $currentYear && $dayNum == $currentDayOfTheMonth){
+
+                            echo "<div class=\"boxCurrentDay\">".$dayNum."</div>";
+                            $dayNum++;
+
+                        }else{
+
+                            echo "<div class=\"box\">".$dayNum."</div>";
+                            $dayNum++;
+
+                        }
 
                     //creates empty boxes at end
                     } else{
